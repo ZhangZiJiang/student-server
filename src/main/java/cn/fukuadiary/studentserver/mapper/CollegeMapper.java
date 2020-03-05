@@ -1,7 +1,7 @@
 package cn.fukuadiary.studentserver.mapper;
 
+import cn.fukuadiary.studentserver.model.College;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -16,10 +16,13 @@ import java.util.List;
 @Mapper
 public interface CollegeMapper {
 
-    @Select("select college_name from college")
-    List<String> selectAllCollege();
+    @Select("select * from college")
+    List<College> selectAllCollege();
 
-    @Select("select id from college where college_name={collegeName}")
+    @Select("select id from college where college_name=#{collegeName}")
     Integer selectIdByCollegeName(String collegeName);
+
+    @Select("select college_name from college where college_name=#{collegeName}")
+    String selectNameByCollegeName(Long id);
 
 }

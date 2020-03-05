@@ -11,10 +11,11 @@ import java.util.Date;
 public class Student {
     private Long id;
     private String studentName;
+    private String sex;
     private Date dateBirth;
     private Long studentId;
     private String cardId;
-    private String collegeId;
+    private Long collegeId;
     private String discipline;
     private String classes;
     private Long teacherId;

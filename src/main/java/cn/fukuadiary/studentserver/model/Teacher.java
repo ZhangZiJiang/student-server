@@ -15,6 +15,7 @@ public class Teacher {
     private Long Id;
     private String teacherName;
     private String cardId;
+    private String phone;
     private String role;
     private String description;
 }
